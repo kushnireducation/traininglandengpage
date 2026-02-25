@@ -87,3 +87,4 @@ export default function App() {
     </div>
   );
 }
+import ThankYou from "./ThankYou";
