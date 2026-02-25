@@ -1,3 +1,4 @@
+import ThankYou from "./ThankYou";
 import { useCallback, useEffect } from 'react';
 import { CountdownTimer } from './components/CountdownTimer';
 import { HeroSection } from './components/HeroSection';
@@ -55,6 +56,11 @@ export default function App() {
     }
   }, []);
 
+  // 👇 ОЦЕ ГОЛОВНЕ — перевірка URL
+  if (window.location.pathname === "/thank-you") {
+    return <ThankYou />;
+  }
+
   return (
     <div className="min-h-screen bg-zinc-950 text-white">
       {/* Facebook Pixel noscript */}
@@ -87,4 +93,3 @@ export default function App() {
     </div>
   );
 }
-import ThankYou from "./ThankYou";
